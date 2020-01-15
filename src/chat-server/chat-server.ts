@@ -1,5 +1,6 @@
 import { Server, WebSocketServerConnection } from "@/app-modules/server-comms";
-import { Subject } from "rxjs";
+import { Subject, Observable } from "rxjs";
+import { Message } from "./incoming/message";
 
 class ChatServer extends Server {
   constructor(connection: WebSocketServerConnection) {

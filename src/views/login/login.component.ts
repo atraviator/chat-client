@@ -6,6 +6,6 @@ import Component from "vue-class-component";
 })
 export default class Login extends Vue {
   public buttonClicked() {
-    this.$router.push("chat");
+    this.$router.push("chat").catch(() => {});
   }
 }

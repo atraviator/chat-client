@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter, { RouterOptions } from "vue-router";
 import Login from "@/views/login";
 import Chat from "@/views/chat";
+import Store from "../store";
 
 Vue.use(VueRouter);
 
@@ -15,7 +16,10 @@ const routerOptions: RouterOptions = {
     {
       path: "/chat",
       name: "chat",
-      component: Chat
+      component: Chat,
+      beforeEnter: (to, from, next) => {
+        next();
+      }
     }
   ]
 };
